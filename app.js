@@ -8,6 +8,7 @@ const https = require("https");
 const request = require("request")
 const app = express();
 
+var mykey = config.MY_KEY
 
 app.use(express.static("public"));
 app.use(express.urlencoded({extended:true}))
@@ -36,7 +37,7 @@ app.post("/", function(req,res){
     const jsonData = JSON.stringify(data)
     const options = {
         method: "POST",
-        auth:"Ob:7c8c8b76fea98e01055562292619fbeb-us21"
+        auth:mykey
     }
     const url = "https://us21.api.mailchimp.com/3.0/lists/369e88a15a"
     
