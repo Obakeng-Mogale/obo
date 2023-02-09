@@ -1,2 +1,4 @@
 config.js
-git st.
+.env
+/node_modules
+node_modules
